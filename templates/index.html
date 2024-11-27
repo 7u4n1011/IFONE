@@ -16,12 +16,5 @@
     <a href="{{ url_for('productos')}}">
         <button>Productos</button>
     </a>
-
-    <h1>Lista de productos cargados</h1> 
-    {% for producto in productos %}
-        {% for atributo in producto %}
-            {{atributo}}
-        {% endfor %}
-    {% endfor %}
 </body>
 </html>
