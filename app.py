@@ -43,7 +43,7 @@ def agregar_pedido():
   query = 'INSERT INTO pedido (fecha, cantidad, direccion, nombre_producto, ID_cliente) VALUES (%s, %s, %s, %s, %s)'
   cursor.execute(query, (tipo,descripcion,nombre_producto,precio,ID_cliente))
   conexion.commit()
-  return redirect(url_for('productos'))
+  return redirect(url_for('pedidos'))
 
 @app.route('/modificar_pedido')
 def modificar_pedido():
@@ -74,7 +74,7 @@ def agregar_clientes():
   query = 'INSERT INTO cliente (nombre, direccion, DNI) VALUES (%s, %s, %s)'
   cursor.execute(query, (nombre, direccion, DNI))
   conexion.commit()
-  return redirect(url_for('cliente'))
+  return redirect(url_for('clientes'))
 
 @app.route('/modificar_clientes')
 def modificar_clientes():
