@@ -31,7 +31,7 @@ def pedidos():
   return render_template('pedidos.html',pedidos=pedidos)
 
 @app.route('/agregar_pedido', methods=['POST'])
-def agregar_productos():
+def agregar_pedido():
   #obtengo los datos del formulario
   fecha = request.form.get('fecha')
   cantidad = request.form.get('cantidad')
@@ -46,11 +46,11 @@ def agregar_productos():
   return redirect(url_for('productos'))
 
 @app.route('/modificar_pedido')
-def modificar_productos():
+def modificar_pedido():
   pass
 
 @app.route('/eliminar_pedido')
-def eliminar_productos():
+def eliminar_pedido():
   pass
 
 # -----------------------------------------------------------------------
@@ -64,7 +64,7 @@ def clientes():
   return render_template('clientes.html',clientes=clientes)
 
 @app.route('/agregar_clientes', methods=['POST'])
-def agregar_productos():
+def agregar_clientes():
   #obtengo los datos del formulario
   nombre = request.form.get('nombre')
   direccion = request.form.get('direccion')
@@ -77,11 +77,11 @@ def agregar_productos():
   return redirect(url_for('cliente'))
 
 @app.route('/modificar_clientes')
-def modificar_productos():
+def modificar_clientes():
   pass
 
 @app.route('/eliminar_clientes')
-def eliminar_productos():
+def eliminar_clientes():
   pass
 
 # -----------------------------------------------------------------------
