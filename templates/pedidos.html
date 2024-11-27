@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="text/css" href="{{ url_for('static', filename='estilo.css') }}">
 </head>
 <body>
+    <table>
+        <th>Fecha</th>
+        <th>Cantidad de Productos</th>
+        <th>Direccion</th>
+        <th>Producto seleccionado</th>
+        <th>DNI del cliente</th>
+        {% for cliente in clientes}
+            <tr>    
+            {% for atributo in cliente %}      
+                <td>{{atributo}}</td>
+            {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+
     <h1>Menu Pedidos</h1>
     <form action="{{ url_for('agregar_pedido')}}" method="POST">
         <label for="fecha">Fecha</label>
