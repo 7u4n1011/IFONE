@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="text/css" href="{{ url_for('static', filename='estilo.css') }}">
 </head>
 <body>
+    <a href="{{ url_for('pedidos')}}">
+        <button>Pedidos</button>
+    </a>
+    <a href="{{ url_for('clientes')}}">
+        <button>Clientes</button>
+    </a>
+    <a href="{{ url_for('productos')}}">
+        <button>Productos</button>
+    </a>
+
     <h1>Lista de productos cargados</h1> 
     {% for producto in productos %}
         {% for atributo in producto %}
