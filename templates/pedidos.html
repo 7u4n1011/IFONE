@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iphone Rio Cuarto</title>
+    <link rel="stylesheet" href="text/css" href="{{ url_for('static', filename='estilo.css') }}">
+</head>
+<body>
+    <h1>Menu Pedidos</h1>
+    <form action="{{ url_for('agregar_pedido')}}" method="POST">
+        <label for="fecha">Fecha</label>
+        <input type="date" id="fecha" name="fecha" required>
+        <br>
+        <label for="cantidad">Cantidad</label>
+        <input type="number" id="cantidad" name="cantidad" required>
+        <br>
+        <label for="direccion">Direccion</label>
+        <input type="text" id="direccion" required>
+        <br>
+        <label for="nombre_producto">¿Que producto desea?</label>
+        <input type="text" id="nombre_producto" required>
+        <br>
+        <label for="ID_cliente">Ingresa tu DNI</label>
+        <input type="number" id="ID_cliente" name="ID_cliente" required>
+        <br>
+        <input type="submit" value="Agregar">
+    </form>
+</body>
+</html>

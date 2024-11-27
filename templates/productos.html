@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="text/css" href="{{ url_for('static', filename='estilo.css') }}">
 </head>
 <body>
-    <h1>Menu Clientes</h1>
-    <form action="{{ url_for('agregar_clientes')}}" method="POST">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
+    <h1>Menu Productos</h1>
+    <form action="{{ url_for('agregar_productos')}}" method="POST">
+        <label for="tipo">Tipo</label>
+        <input type="text" id="tipo" name="tipo" required>
         <br>
-        <label for="direccion">Direccion:</label>
-        <input type="text" id="direccion" name="direccion" required>
+        <label for="descripcion">Descripcion</label>
+        <input type="text" id="descripcion" name="descripcion" required>
         <br>
-        <label for="DNI">Ingrese su DNI:</label>
+        <label for="precio">Precio</label>
         <input type="number" id="precio" required>
         <br>
         <input type="submit" value="Agregar">
