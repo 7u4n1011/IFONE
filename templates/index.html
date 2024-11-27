@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iphone Rio Cuarto</title>
+    <link rel="stylesheet" href="text/css" href="{{ url_for('static', filename='estilo.css') }}">
+</head>
+<body>
+    <h1>Lista de productos cargados</h1> 
+    {% for producto in productos %}
+        {% for atributo in producto %}
+            {{atributo}}
+        {% endfor %}
+    {% endfor %}
+
+    <h1>Menu Productos</h1>
+</body>
+</html>
