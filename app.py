@@ -20,6 +20,9 @@ app = Flask(__name__)
 def index():
   return render_template('index.html')
 
+if __name__ == '__main__':
+  app.run(debug=True)
+
 # -----------------------------------------------------------------------
 
 # Menu Pedidos
@@ -74,7 +77,7 @@ def agregar_clientes():
   query = 'INSERT INTO cliente (nombre, direccion, DNI) VALUES (%s, %s, %s)'
   cursor.execute(query, (nombre, direccion, DNI))
   conexion.commit()
-  return redirect(url_for('clientes'))
+  return redirect(url_for('cliente'))
 
 @app.route('/modificar_clientes')
 def modificar_clientes():
@@ -116,6 +119,3 @@ def eliminar_productos():
   pass
 
 # -----------------------------------------------------------------------
-
-if __name__ == '__main__':
-  app.run(debug=True)
