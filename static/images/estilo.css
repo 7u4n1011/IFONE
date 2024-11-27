@@ -1,175 +1,117 @@
-    /* Estilos generales para el cuerpo */
-    body {
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-        background-image: url('/static/images/fondo.png');
-        background-size: cover; /* Ajusta la imagen para que cubra todo el fondo */
-        background-position: center; /* Centra la imagen en el fondo */
-        background-repeat: no-repeat; /* Evita que la imagen se repita */
-    }
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
 
-    .button-container{
-        display: flex;
-        flex-direction: column; /* Los botones se alinearán en una columna */
-        align-items: flex-end; /* Alinea los botones al lado derecho dentro del contenedor */
-    }
+/* Header */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin: 20px 0;
+}
 
-    .button {
-        background-color: #3498db; /* Color de fondo azul */
-        border: none;
-        border-radius: 150px; /* Bordes redondeados */
-        color: white;
-        padding: 40px 80px;
-        text-align: center;
-        text-decoration: none;
-        font-size: 30px;
-        cursor: pointer;
-        transition: background-color 0.3s, transform 0.3s;
-        display: block; /* Asegura que cada botón se muestre en una nueva línea */
-        margin-bottom: 10px; /* Espacio entre los botones */
-        margin-left: 350px;
-        margin-right: 150px;
-        margin-top: 130px;
-    }
+/* Links and Buttons */
+a {
+    text-decoration: none;
+}
 
-    .button-1{
-        margin-right: 168px;
-    }
+button {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-    .button-3{
-        margin-right: 160px;
-    }
+button:hover {
+    background-color: #2980b9;
+}
 
-    /* Efecto de cambio de color al pasar el ratón */
-    .button:hover {
-        background-color: #2980b9; /* Color de fondo azul más oscuro */
-        transform: scale(1.05); /* Aumenta ligeramente el tamaño del botón */
-    }
+/* Forms */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-    /* Estilos específicos para el primer botón */
-    .button-1 {
-        background-color: #e74c3c; /* Rojo */
-    }
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
 
-    /* Efecto de cambio de color para el primer botón */
-    .button-1:hover {
-        background-color: #c0392b; /* Rojo más oscuro */
-    }
+input[type="text"],
+input[type="number"],
+input[type="date"] {
+    width: calc(100% - 20px);
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
 
-    /* Estilos específicos para el segundo botón */
-    .button-2 {
-        background-color: #2ecc71; /* Verde */
-    }
+input[type="submit"] {
+    width: 100%;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-    /* Efecto de cambio de color para el segundo botón */
-    .button-2:hover {
-        background-color: #27ae60; /* Verde más oscuro */
-    }
+input[type="submit"]:hover {
+    background-color: #27ae60;
+}
 
-    /* Estilos específicos para el tercer botón */
-    .button-3 {
-        background-color: #f39c12; /* Naranja */
-    }
+/* Tables (if needed) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
 
-    /* Efecto de cambio de color para el tercer botón */
-    .button-3:hover {
-        background-color: #e67e22; /* Naranja más oscuro */
-    }
-    //* Container styling */
-    .container {
-        text-align: center;
-        padding: 20px;
-        min-height: 100vh;
-        position: relative; /* Permitir posicionamiento absoluto dentro del contenedor */
-    }
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
 
-    /* Title styling */
-    h1 {
-        font-size: 2.5em;
-        color: #4a6fa5;
-        margin-bottom: 20px;
-    }
+th {
+    background-color: #f4f4f9;
+    font-weight: bold;
+}
 
-    /* Button styling */
-    .button-container {
-        position: absolute;
-    }
-
-    #cargar {
-        background-color: #4a90e2;
-        color: #fff;
-        border: none;
-        border-radius: 10px;
-        padding: 10px 20px;
-        font-size: 1em;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
-    }
-
-    #modificar {
-        background-color: #4a90e2;
-        color: #fff;
-        border: none;
-        border-radius: 10px;
-        padding: 10px 20px;
-        font-size: 1em;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    #eliminar {
-        background-color: #4a90e2;
-        color: #fff;
-        border: none;
-        border-radius: 10px;
-        padding: 10px 20px;
-        font-size: 1em;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-    }
-
-    /* Button hover effect */
-    .button-container button:hover {
-        background-color: #3a6ca0;
-    }
-
-    /* Table styling */
-    .table-container {
-        margin: 0 auto;
-        width: 80%;
-        overflow-x: auto;
-    }
-
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
-        border-radius: 10px;
-        overflow: hidden;
-    }
-
-    th, td {
+/* Responsive Design */
+@media (max-width: 600px) {
+    form {
         padding: 15px;
-        text-align: left;
-        border-bottom: 1px solid #ddd;
     }
 
-    th {
-        background-color: #4a90e2;
-        color: #fff;
+    button {
+        padding: 8px 15px;
+        font-size: 14px;
     }
 
-    tr:hover {
-        background-color: #f1f1f1;
+    input[type="submit"] {
+        padding: 8px;
     }
+}
