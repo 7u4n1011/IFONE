@@ -3,18 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iphone Rio Cuarto</title>
-    <link rel="stylesheet" href="text/css" href="{{ url_for('static', filename='estilo.css') }}">
+    <title>Iphones Río Cuarto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}?v=1.0">
+
 </head>
 <body>
-    <a href="{{ url_for('pedidos')}}">
-        <button>Pedidos</button>
-    </a>
-    <a href="{{ url_for('clientes')}}">
-        <button>Clientes</button>
-    </a>
-    <a href="{{ url_for('productos')}}">
-        <button>Productos</button>
-    </a>
+    <div class="container">
+        <!-- Left section -->
+        <div class="left-section">
+            <h1>Iphones Río Cuarto</h1>
+            <p>Venta de productos Apple<br>
+                Cargadores | Fundas<br>
+                Celulares | Airpods
+            </p>
+            <div class="icons">
+                <div class="icon">📷</div>
+                <div class="icon">🔗</div>
+                <div class="icon">✉️</div>
+            </div>
+        </div>
+        <!-- Right section -->
+        <div class="right-section">
+            <a href="{{ url_for('clientes') }}">
+                <button class="button">👥 Clientes</button>
+            </a>
+            <a href="{{ url_for('productos') }}">
+                <button class="button">🛒 Productos</button>
+            </a>
+            <a href="{{ url_for('pedidos') }}">
+                <button class="button">📦 Pedidos</button>
+            </a>
+        </div>
+    </div>
 </body>
 </html>

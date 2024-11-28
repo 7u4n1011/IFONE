@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iphone Rio Cuarto</title>
-    <link rel="stylesheet" href="text/css" href="{{ url_for('static', filename='estilo.css') }}">
+    <link rel="stylesheet" href="text/css" href="{{ url_for('static', filename='css/estilo.css') }}">
 </head>
 <body>
-    <h1>Lista de clientes cargados</h1> 
-    {% for cliente in clientes %}
+    <table>
+        <th>nombre</th>
+        <th>Descripcion</th>
+        <th>Precio</th>
+        {% for cliente in clientes %}
+
         {% for atributo in cliente %}
             {{atributo}}
         {% endfor %}
     {% endfor %}
+
+      </table> 
+    <h1>Lista de clientes cargados</h1> 
 
     <h1>Menu Clientes</h1>
     <form action="{{ url_for('agregar_clientes')}}" method="POST">
